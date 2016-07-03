@@ -1,0 +1,31 @@
+{
+  "name": "angular-becky-cms",
+  "version": "1.0.0",
+  "description": "A simple cms app for angular.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethstanfill/angular-becky-cms.git"
+  },
+  "keywords": [
+    "angular",
+    "becky",
+    "cms"
+  ],
+  "author": "Seth Stanfill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sethstanfill/angular-becky-cms/issues"
+  },
+  "homepage": "https://github.com/sethstanfill/angular-becky-cms#readme",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.1"
+  }
+}
