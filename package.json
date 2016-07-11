@@ -1,16 +1,30 @@
 {
-  "name": "becky-loop",
+  "name": "angular-becky-cms",
   "version": "1.0.0",
+  "description": "A simple cms app for angular.",
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
     "pretest": "eslint .",
     "posttest": "nsp check",
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "watch": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
-    "test-watch": "karma start --auto-watch --no-single-run",
-    "dev": "npm run server"
+    "test-watch": "karma start --auto-watch --no-single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethstanfill/angular-becky-cms.git"
+  },
+  "keywords": [
+    "angular",
+    "becky",
+    "cms"
+  ],
+  "author": "Seth Stanfill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sethstanfill/angular-becky-cms/issues"
   },
   "dependencies": {
     "angular": "^1.5.7",
@@ -47,21 +61,18 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "node-libs-browser": "^1.0.0",
     "nsp": "^2.1.0",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.4",
     "postcss-loader": "^0.9.1",
+    "pug": "^2.0.0-beta3",
+    "pug-html-loader": "^1.0.8",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
-  },
-  "repository": {
-    "type": "",
-    "url": ""
-  },
-  "license": "MIT",
-  "description": "becky-loop"
+  }
 }

@@ -10,6 +10,10 @@ export default function router($urlRouterProvider, $locationProvider, $stateProv
 		.state("admin", {
 			url: "/admin",
 			template: require("../components/admin/home.html")
+		})
+		.state("admin.about", {
+			url: "/about",
+			template: require("../components/admin/about.pug")
 		});
 
 };
