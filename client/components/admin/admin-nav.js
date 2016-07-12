@@ -3,7 +3,7 @@
 // template directive
 export function adminNav () {
 	return {
-		template: require("./admin-nav.html"),
+		template: require("./admin-nav.pug"),
 		controller: "adminNavController"
 	}
 };
@@ -12,6 +12,6 @@ export function adminNav () {
 adminNavController.$inject = ["$scope"]
 export function adminNavController($scope) {
 
-	$scope.title = "Becky";
+	$scope.siteName = "Becky CMS Admin Portal";
 
 };

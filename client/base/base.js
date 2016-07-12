@@ -9,7 +9,8 @@ import {
   adminNav
 } from "../components/admin/admin-nav.js";
 
-import "../components/admin/admin-nav.less";
+// all styles
+import "./common.less";
 
 angular.module("becky", [uiRouter])
   
