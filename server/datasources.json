@@ -7,8 +7,8 @@
     "host": "localhost",
     "port": 3306,
     "url": "",
-    "database": "becky-cms-db",
-    "password": "IR8!Y>ev.tX5",
+    "database": "becky_site",
+    "password": "31519XvnQ^Qd",
     "name": "AccountDb",
     "user": "root",
     "connector": "mysql"
