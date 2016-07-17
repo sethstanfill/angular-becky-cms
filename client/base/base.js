@@ -3,20 +3,31 @@ import angular from "angular";
 import uiRouter from "angular-ui-router";
 import router from "./router.js";
 
-// admin
+// admin nav
 import {
   adminNavController,
   adminNav
 } from "../components/admin/admin-nav.js";
 
-// all styles
-import "./common.less";
+// admin panel
+import {
+  adminPanelController,
+  adminPanel
+} from "../components/admin/admin-panel.js";
 
+// import styles into this file
+import "./common.less";
+	
+// add your modules here
 angular.module("becky", [uiRouter])
   
-  // base
+	// base
 	.config(router)
 
-  // Admin
-  .directive("adminNav", adminNav)
-  .controller("adminNavController", adminNavController);
+	// admin nav
+	.directive("adminNav", adminNav)
+	.controller("adminNavController", adminNavController)
+
+	// admin panel
+	.directive("adminPanel", adminPanel)
+	.controller("adminPanelController", adminPanelController);

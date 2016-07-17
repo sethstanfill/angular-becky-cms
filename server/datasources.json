@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "AccountDb": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "becky-cms-db",
+    "password": "IR8!Y>ev.tX5",
+    "name": "AccountDb",
+    "user": "root",
+    "connector": "mysql"
   }
 }

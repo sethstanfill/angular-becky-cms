@@ -1,0 +1,63 @@
+@headerHeight: 50px;
+@panelPadding: 20px;
+@panelWidth: 180px;
+@contentPadding: 10px;
+
+#admin {
+	background-color: @aWhite;
+	.header {
+		background-color: @aBlue;
+		float: left;
+		height: @headerHeight;
+		position: relative;
+		width: 100%;
+	}
+	.site-name {
+		color: @aTan;
+		float: left;
+		font-size: 18px;
+		margin-left: 20px;
+	}
+	.content {
+		float: left;
+		height: calc(~"100vh" - (@headerHeight + (@contentPadding * 2)));
+		padding: @contentPadding;
+		width: calc(~"100%" - (@panelWidth + @panelPadding * 2) + (@contentPadding * 2 ));
+	}
+	.panel {
+		background-color: @aBrown;
+		float: left;
+		height: calc(~"100vh" - @headerHeight);
+		padding: 0 @panelPadding;
+		width: @panelWidth;
+		.title {
+			color: @aWhite;
+			clear: both;
+			float: left;
+			font-weight: 100;
+			margin: 10px 0;
+		}
+		.page {
+			color: @aWhite;
+			clear: both;
+			float: left;
+			font-size: 11px;
+			margin: 0 0 5px 10px;
+			&:before {
+				border-left: 1px dotted #ffffff;
+				border-bottom: 1px dotted #ffffff;
+				content: "";
+				float: left;
+				height: 10px;
+				margin: -3px 5px 0 0;
+				width: 10px;
+			}
+			&:hover {
+				color: @aTan;
+			}
+			&.active {
+				color: @aTan;
+			}
+		}
+	}
+}
