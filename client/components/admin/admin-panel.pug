@@ -1,2 +1,2 @@
 span.title Pages
-a.page(ng-repeat="(key, page) in pages" ui-sref="admin.{{key}}" ng-bind="page")
+a.page(ng-repeat="(key, page) in pages" ng-bind="page" ui-sref="admin.{{key}}" ui-sref-active="active")

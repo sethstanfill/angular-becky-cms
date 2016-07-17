@@ -9,8 +9,8 @@ export function adminPanel () {
 };
 
 // template controller
-adminPanelController.$inject = ["$scope"];
-export function adminPanelController($scope) {
+adminPanelController.$inject = ["$scope", "$state"];
+export function adminPanelController($scope, $state) {
 
 	$scope.pages = { 
 		home: "Home", 

@@ -16,6 +16,7 @@
 		color: @aTan;
 		float: left;
 		font-size: 18px;
+		line-height: 50px;
 		margin-left: 20px;
 	}
 	.content {
@@ -23,6 +24,13 @@
 		height: calc(~"100vh" - (@headerHeight + (@contentPadding * 2)));
 		padding: @contentPadding;
 		width: calc(~"100%" - (@panelWidth + @panelPadding * 2) + (@contentPadding * 2 ));
+		.title {
+			border-bottom: 1px solid @aBlue;
+			clear: both;
+			float: left;
+			padding-bottom: 5px;
+			width: 100%;
+		}
 	}
 	.panel {
 		background-color: @aBrown;
