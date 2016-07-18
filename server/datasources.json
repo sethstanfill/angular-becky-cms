@@ -3,13 +3,13 @@
     "name": "db",
     "connector": "memory"
   },
-  "AccountDb": {
+  "beckyapp": {
     "host": "localhost",
     "port": 3306,
     "url": "",
     "database": "becky_site",
     "password": "31519XvnQ^Qd",
-    "name": "AccountDb",
+    "name": "beckyapp",
     "user": "root",
     "connector": "mysql"
   }

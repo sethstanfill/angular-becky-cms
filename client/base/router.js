@@ -11,7 +11,8 @@ export default function router($urlRouterProvider, $locationProvider, $stateProv
 		.state("admin", {
 			abstract: true,
 			url: "/admin",
-			template: require("../components/admin/admin.pug")
+			template: require("../components/admin/admin.pug"),
+			controller: "adminController"
 		})
 		// default template
 		.state("admin.default", {

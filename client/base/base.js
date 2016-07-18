@@ -1,33 +1,27 @@
 // base
 import angular from "angular";
+import resource from "angular-resource";
 import uiRouter from "angular-ui-router";
+import lbServices from "./lb-services";
 import router from "./router.js";
 
-// admin nav
+// admin
 import {
-  adminNavController,
-  adminNav
-} from "../components/admin/admin-nav.js";
-
-// admin panel
-import {
-  adminPanelController,
+  adminController,
+  adminNav,
   adminPanel
-} from "../components/admin/admin-panel.js";
+} from "../components/admin/admin-controller";
 
 // import styles into this file
 import "./common.less";
 	
 // add your modules here
-angular.module("becky", [uiRouter])
+angular.module("becky", [uiRouter, lbServices])
   
 	// base
 	.config(router)
 
 	// admin nav
 	.directive("adminNav", adminNav)
-	.controller("adminNavController", adminNavController)
-
-	// admin panel
 	.directive("adminPanel", adminPanel)
-	.controller("adminPanelController", adminPanelController);
+	.controller("adminController", adminController);

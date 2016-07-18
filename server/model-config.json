@@ -14,26 +14,34 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "beckyapp"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "beckyapp",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "beckyapp",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "beckyapp",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "beckyapp",
     "public": false
   },
   "Account": {
-    "dataSource": "AccountDb",
+    "dataSource": "beckyapp",
+    "public": true
+  },
+  "Admin": {
+    "dataSource": "beckyapp",
+    "public": true
+  },
+  "Content": {
+    "dataSource": "beckyapp",
     "public": true
   }
 }
