@@ -1,0 +1,4 @@
+div.section(ng-repeat="item in content")
+	span(ng-bind="item.section")
+	textarea(ng-model="item.value")
+	input(type="button" value="Save" ng-click="editContent(item)")

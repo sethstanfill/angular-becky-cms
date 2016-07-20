@@ -1,14 +1,14 @@
 "use strict";
 
-// admin controller
-adminController.$inject = ["$scope", "$state", "Content"];
-export function adminController($scope, $state, Content) {
+adminController.$inject = ["$scope", "$state", "contentService"];
+
+export function adminController($scope, $state, contentService) {
 
 	// admin display nav
 	$scope.siteName = "Becky CMS Admin Portal";
 	
-	// define your pages here - make sure your name
-	$scope.pages = { 
+	// define your pages here
+	$scope.pages = {
 		home: "Home",
 		gallery: "Gallery",
 		about: "About Us"
@@ -20,19 +20,17 @@ export function adminController($scope, $state, Content) {
 	// get the page content from the db
 	$scope.getContent = function(page) {
 
-		// get current page content
-		Content.find({
-			filter: {
-				where: {
-					page: page
-				}
-			}
-		}, function(data) {
-			$scope.content = data[0];
+		contentService.get(page).then(function(response) {
+			$scope.content = response;
 		});
 
 	};
 	$scope.getContent(page);
+
+	// edit content based on id
+	$scope.editContent = function(item) {
+		contentService.edit(item);
+	};
 
 };
 

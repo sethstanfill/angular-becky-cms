@@ -31,6 +31,10 @@ export default function router($urlRouterProvider, $locationProvider, $stateProv
 		.state("admin.about", {
 			url: "/about",
 			template: require("../components/admin-pages/about.pug")
+		})
+		.state("admin.create", {
+			url: "/create",
+			template: require("../components/admin-pages/create.pug")
 		});
 
 	$urlRouterProvider.otherwise("/admin");

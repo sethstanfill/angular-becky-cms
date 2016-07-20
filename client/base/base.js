@@ -12,6 +12,12 @@ import {
   adminPanel
 } from "../components/admin/admin-controller";
 
+// content
+import {
+	content,
+	contentService
+} from "../components/content/content";
+
 // import styles into this file
 import "./common.less";
 	
@@ -24,4 +30,8 @@ angular.module("becky", [uiRouter, lbServices])
 	// admin nav
 	.directive("adminNav", adminNav)
 	.directive("adminPanel", adminPanel)
-	.controller("adminController", adminController);
+	.controller("adminController", adminController)
+
+	// content
+	.directive("content", content)
+	.factory("contentService", contentService);

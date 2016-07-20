@@ -28,8 +28,35 @@
 			border-bottom: 1px solid @aBlue;
 			clear: both;
 			float: left;
+			margin-bottom: 10px;
 			padding-bottom: 5px;
 			width: 100%;
+		}
+		.section {
+			float: left;
+			height: 150px;
+			padding: 10px 0;
+			width: 50%;
+			&:nth-child(2n + 0) {
+				padding-right: 2%;
+				width: 48%;
+			}
+			textarea {
+				border: 1px solid @aBlue;
+				float: left;
+				height: 55%;
+				outline: none;
+				padding: 2%;
+				resize: none;
+				width: 96%;
+				&:focus {
+					border: 1px solid @aTan;
+				}
+			}
+			input {
+				float: right;
+				margin-top: 5px
+			}
 		}
 	}
 	.panel {
