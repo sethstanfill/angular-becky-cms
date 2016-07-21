@@ -4,7 +4,6 @@
 export function content() {
 	return {
 		restrict: "A",
-		replace: true,
 		template: require("./content.pug")
 	};
 };

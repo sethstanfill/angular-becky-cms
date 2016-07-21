@@ -1,3 +1,4 @@
+span.missing(ng-if="!content[0].value") This page does not contain any editable content.
 div.section(ng-repeat="item in content")
 	span(ng-bind="item.section")
 	textarea(ng-model="item.value")
