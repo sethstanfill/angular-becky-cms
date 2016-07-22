@@ -1,6 +1,6 @@
 # Angular Becky CMS
 
-##Version 0.1.1
+##Version 0.1.6
 The shell is setup and working properly and you can start building apps on your local environment, but this version is not ready for production yet.
 
 ##Becky?
