@@ -1,1 +1,23 @@
 span.title Create
+div.create-form
+	span.form-title New Page Content
+	form(ng-submit="createContent()")
+
+		label Enter the page this content will appear on*
+			div.select-wrapper
+				select(ng-model="contentForm.page" ng-options="key as page for (key, page) in pages" required)
+					option(value="") Select Page
+
+		label Select the content type.
+			label Text
+				input(type="radio" ng-model="contentForm.type" value="text")
+			label Picture
+				input(type="radio" ng-model="contentForm.type" value="picture")
+
+		label Enter section name for frontend filtering*
+			input(type="text" ng-model="contentForm.section" value="Text" placeholder="Section Name" required)
+
+		label Enter the text you want to appear for this section*
+			textarea(ng-model="contentForm.value" placeholder="Enter Page Content Here" required)
+
+		input(type="submit" value="Save")

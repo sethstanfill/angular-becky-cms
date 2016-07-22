@@ -14,6 +14,11 @@ export function adminController($scope, $state, contentService) {
 		about: "About Us"
 	};
 
+	// define creation object for create page to use separate ng-models
+	$scope.contentForm = { 
+		type: "text"
+	};
+
 	// get the nested state name for initial content retrieval
 	var page = $state.current.name.split(".")[1];
 
@@ -30,6 +35,12 @@ export function adminController($scope, $state, contentService) {
 	// edit content based on id
 	$scope.editContent = function(item) {
 		contentService.edit(item);
+	};
+
+	$scope.createContent = function() {
+
+		contentService.create($scope.contentForm);
+
 	};
 
 };

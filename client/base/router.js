@@ -32,6 +32,7 @@ export default function router($urlRouterProvider, $locationProvider, $stateProv
 			url: "/about",
 			template: require("../components/admin-pages/about.pug")
 		})
+		// do not delete - used for creating data for devs
 		.state("admin.create", {
 			url: "/create",
 			template: require("../components/admin-pages/create.pug")

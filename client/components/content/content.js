@@ -33,6 +33,16 @@ export function contentService(Content) {
 				console.log("error");
 			});
 
+		},
+		// create a new item in the content table
+		create: function(form) {
+
+			Content.create({
+				page: form.page,
+				section: form.section,
+				value: form.value
+			});
+
 		}
 	};
 };
