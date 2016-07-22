@@ -32,10 +32,14 @@ export default function router($urlRouterProvider, $locationProvider, $stateProv
 			url: "/about",
 			template: require("../components/admin-pages/about.pug")
 		})
-		// do not delete - used for creating data for devs
+		// do not delete - used for creating and deleteing data for devs
 		.state("admin.create", {
 			url: "/create",
 			template: require("../components/admin-pages/create.pug")
+		})
+		.state("admin.delete", {
+			url: "/delete",
+			template: require("../components/admin-pages/delete.pug")
 		});
 
 	$urlRouterProvider.otherwise("/admin");

@@ -2,3 +2,4 @@ span.title Pages
 a.page(ng-repeat="(key, page) in pages" ng-bind="page" ui-sref="admin.{{key}}" ui-sref-active="active" ng-click="getContent(key)")
 span.title Developer Tools
 a.page(ui-sref="admin.create" ui-sref-active="active") Create
+a.page(ui-sref="admin.delete" ui-sref-active="active" ng-click="getContent()") Delete

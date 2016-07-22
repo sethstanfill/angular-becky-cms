@@ -32,6 +32,16 @@
 			padding-bottom: 5px;
 			width: 100%;
 		}
+		.sub-title {
+			border-bottom: 1px solid @aBlue;
+			clear: both;
+			float: left;
+			font-size: 13px;
+			font-style: italic;
+			margin: 10px 0;
+			padding-bottom: 5px;
+			width: 100%;
+		}
 		.missing {
 			font-size: 14px;
 			font-style: italic;
@@ -152,6 +162,35 @@
 				}
 			}
 		}
+		.delete {
+			background-color: @aBlue;
+			float: left;
+			width: 32.2%;
+			padding: 0.5%;
+			position: relative;
+			&:nth-child(2n + 0) {
+				margin-right: 2%;
+				width: 30.2%;
+			}
+			.name {
+				color: @aTan;
+				clear: both;
+				float: left;
+				font-size: 13px;
+				width: 100%;
+			}
+			p {
+				background-color: @aWhite;
+				clear: both;
+				float: left;
+				height: 75px;
+				font-size: 11px;
+				margin: 5px 0 0 0;
+				overflow: auto;
+				padding: 0.5%;
+				width: 99%;
+			}
+		}
 	}
 	.panel {
 		background-color: @aBrown;
@@ -188,5 +227,27 @@
 				color: @aTan;
 			}
 		}
+	}
+	.admin-modal {
+		background-color: @aWhite;
+		height: 100px;
+		left: 50%;
+		margin-left: -125px;
+		margin-top: -50px;
+		padding: 1%;
+		position: absolute;
+		top: 50%;
+		width: 250px;
+		z-index: 1000;
+	}
+	.admin-backdrop {
+		background-color: @aBrown;
+		height: 100%;
+		left: 0;
+		opacity: 0.5;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 900;
 	}
 }

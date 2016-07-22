@@ -14,10 +14,18 @@ export function adminController($scope, $state, contentService) {
 		about: "About Us"
 	};
 
-	// define creation object for create page to use separate ng-models
-	$scope.contentForm = { 
-		type: "text"
+	// used to reset creation form data after saving
+	$scope.resetFormData = function() {
+
+		// define creation object for create page to use separate ng-models
+		$scope.contentForm = { 
+			type: "text"
+		};
+
 	};
+
+	// set scope by default
+	$scope.resetFormData();
 
 	// get the nested state name for initial content retrieval
 	var page = $state.current.name.split(".")[1];
@@ -25,9 +33,21 @@ export function adminController($scope, $state, contentService) {
 	// get the page content from the db
 	$scope.getContent = function(page) {
 
-		contentService.get(page).then(function(response) {
-			$scope.content = response;
-		});
+		if (page == "delete") {
+
+			// get all of the content from db
+			contentService.getAll().then(function(response) {
+				$scope.content = response;
+			});
+
+		} else {
+
+			// get content based on page name
+			contentService.get(page).then(function(response) {
+				$scope.content = response;
+			});
+
+		}
 
 	};
 	$scope.getContent(page);
@@ -37,9 +57,43 @@ export function adminController($scope, $state, contentService) {
 		contentService.edit(item);
 	};
 
+	// create new page content
 	$scope.createContent = function() {
-
 		contentService.create($scope.contentForm);
+		$scope.resetFormData();
+	};
+
+	$scope.deleteContent = function(answer) {
+
+		if (answer == "yes") {
+
+			contentService.delete($scope.deleteModal.id).then(function(response) {
+
+				// if deletion was successful
+				if (!!response.count) {
+					$scope.getContent(page);
+				}
+
+				$scope.deleteModal.show = false;
+
+			});
+			
+
+		} else {
+			$scope.deleteModal.show = false;
+		}
+
+	}
+
+	// show the modal to confirm deleting content
+	$scope.showDeleteModal = function(id, section) {
+
+		// delete modal object
+		$scope.deleteModal = {
+			show: true,
+			id: id,
+			section: section
+		};
 
 	};
 

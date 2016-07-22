@@ -1,0 +1,13 @@
+span.title Delete
+span.missing Warning : Deleted content is permanently removed from the database.
+div(ng-repeat="(key, page) in pages")
+	span.sub-title(ng-bind="page")
+	div.delete(ng-if="item.page == key" ng-repeat="item in content")
+		span.close-x(ng-click="showDeleteModal(item.id, item.section)") x
+		span.name(ng-bind="item.section")
+		p(ng-bind="item.value")
+div.admin-modal(ng-if="!!deleteModal.show")
+	span(ng-bind="'Are you sure you want to delete the content from the \"'+ deleteModal.section + '\" section ?'")
+	input(ng-click="deleteContent('no')" type="button" value="No")
+	input(ng-click="deleteContent('yes')" type="button" value="Yes")
+div.admin-backdrop(ng-if="!!deleteModal.show")

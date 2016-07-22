@@ -24,6 +24,11 @@ export function contentService(Content) {
 			}).$promise;
 
 		},
+		getAll: function() {
+
+			return Content.find().$promise;
+
+		},
 		// edit and save content from admin panel
 		edit: function(item) {
 
@@ -40,8 +45,15 @@ export function contentService(Content) {
 			Content.create({
 				page: form.page,
 				section: form.section,
+				type: form.type,
 				value: form.value
 			});
+
+		},
+		// delete content by id
+		delete: function(id) {
+
+			return Content.deleteById({ id: id }).$promise;
 
 		}
 	};
