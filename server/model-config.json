@@ -32,10 +32,6 @@
     "dataSource": "beckyapp",
     "public": false
   },
-  "Account": {
-    "dataSource": "beckyapp",
-    "public": true
-  },
   "Admin": {
     "dataSource": "beckyapp",
     "public": true
