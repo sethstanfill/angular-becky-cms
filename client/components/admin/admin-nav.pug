@@ -1,1 +1,3 @@
 a.site-name(ng-bind='siteName' ui-sref="admin.default")
+span.user-name(ng-bind="'Hello, ' + admin.username" ng-if="!!admin")
+span.sign-out(ng-click="logout()" ng-if="!!admin") sign out

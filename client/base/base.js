@@ -11,6 +11,7 @@ import {
   adminNav,
   adminPanel
 } from "../components/admin/admin-controller";
+import adminService from "../components/admin/admin-service";
 
 // content
 import {
@@ -27,10 +28,11 @@ angular.module("becky", [uiRouter, lbServices])
 	// base
 	.config(router)
 
-	// admin nav
+	// admin
 	.directive("adminNav", adminNav)
 	.directive("adminPanel", adminPanel)
 	.controller("adminController", adminController)
+	.factory("adminService", adminService)
 
 	// content
 	.directive("content", content)

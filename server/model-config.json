@@ -39,5 +39,9 @@
   "Content": {
     "dataSource": "beckyapp",
     "public": true
+  },
+  "Container": {
+    "dataSource": "container",
+    "public": true
   }
 }

@@ -12,5 +12,11 @@
     "name": "beckyapp",
     "user": "root",
     "connector": "mysql"
+  },
+  "container": {
+    "name": "container",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./uploads"
   }
 }

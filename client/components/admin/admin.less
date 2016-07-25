@@ -19,6 +19,21 @@
 		line-height: 50px;
 		margin-left: 20px;
 	}
+	.user-name {
+		color: @aWhite;
+		float: right;
+		font-size: 13px;
+		font-weight: 100;
+		margin: 10px 10px 0 0;
+	}
+	.sign-out {
+		clear: right;
+		color: @aWhite;
+		cursor: pointer;
+		float: right;
+		font-size: 11px;
+		margin-right: 10px;
+	}
 	.content {
 		float: left;
 		height: calc(~"100vh" - (@headerHeight + (@contentPadding * 2)));
@@ -72,6 +87,55 @@
 				margin-top: 5px;
 			}
 		}
+		label {
+			clear: both;
+			float: left;
+			font-size: 10px;
+			font-style: italic;
+			margin-top: 10px;
+			width: 100%;
+		}
+		select {
+			appearance: none;
+			background-color: #ffffff;
+			border: none;
+			border-bottom: 1px solid @aBrown;
+			border-radius: 2px;
+			clear: both;
+			cursor: pointer;
+			float: left;
+			font-size: 13px;
+			outline: none;
+			padding: 1%;
+			width: 100%;
+			&:focus {
+				border: 1px solid @aTan;
+			}
+		}
+		input[type="submit"] {
+			background-color: @aWhite;
+			border: none;
+			border-radius: 2px;
+			cursor: pointer;
+			float: right;
+			margin-top: 5px;
+			padding: 5px;
+		}
+		input[type="text"],
+		input[type="password"] {
+			border: none;
+			border-bottom: 1px solid @aBlue;
+			border-radius: 2px;
+			float: left;
+			font-size: 14px;
+			outline: none;
+			margin-top: 5px;
+			padding: 0.5%;
+			width: 99%;
+			&:focus {
+				border: 1px solid @aTan;
+			}
+		}
 		.create-form {
 			float: left;
 			width: 50%;
@@ -103,31 +167,6 @@
 					width: 0;
 				}
 			}
-			label {
-				clear: both;
-				float: left;
-				font-size: 10px;
-				font-style: italic;
-				margin-top: 10px;
-				width: 100%;
-			}
-			select {
-				appearance: none;
-				background-color: #ffffff;
-				border: none;
-				border-bottom: 1px solid @aBrown;
-				border-radius: 2px;
-				clear: both;
-				cursor: pointer;
-				float: left;
-				font-size: 13px;
-				outline: none;
-				padding: 1%;
-				width: 100%;
-				&:focus {
-					border: 1px solid @aTan;
-				}
-			}
 			textarea {
 				border: none;
 				border-bottom: 1px solid @aBlue;
@@ -139,24 +178,6 @@
 				padding: 1%;
 				resize: none;
 				width: 98%;
-				&:focus {
-					border: 1px solid @aTan;
-				}
-			}
-			input[type="submit"] {
-				float: right;
-				margin-top: 5px;
-			}
-			input[type="text"] {
-				border: none;
-				border-bottom: 1px solid @aBlue;
-				border-radius: 2px;
-				float: left;
-				font-size: 14px;
-				outline: none;
-				margin-top: 5px;
-				padding: 0.5%;
-				width: 99%;
 				&:focus {
 					border: 1px solid @aTan;
 				}
@@ -227,6 +248,15 @@
 				color: @aTan;
 			}
 		}
+		.footer {
+			bottom: 5px;
+			color: @aWhite;
+			left: 5px;
+			font-size: 11px;
+			font-style: italic;
+			font-weight: 100;
+			position: absolute;
+		}
 	}
 	.admin-modal {
 		background-color: @aWhite;
@@ -249,5 +279,19 @@
 		top: 0;
 		width: 100%;
 		z-index: 900;
+	}
+	.login {
+		background-color: @aBlue;
+		border-radius: 3px;
+		height: 130px;
+		margin: 60px auto 0;
+		padding: 10px;
+		width: 250px;
+		label {
+			color: @aTan;
+		}
+		input[type="submit"] {
+			margin-top: 10px;
+		}
 	}
 }

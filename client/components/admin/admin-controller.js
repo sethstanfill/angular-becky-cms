@@ -1,8 +1,8 @@
 "use strict";
 
-adminController.$inject = ["$scope", "$state", "contentService"];
+adminController.$inject = ["$scope", "$state", "contentService", "adminService"];
 
-export function adminController($scope, $state, contentService) {
+export function adminController($scope, $state, contentService, adminService) {
 
 	// admin display nav
 	$scope.siteName = "Becky CMS Admin Portal";
@@ -14,10 +14,21 @@ export function adminController($scope, $state, contentService) {
 		about: "About Us"
 	};
 
+	// check if user is authorized admin
+	$scope.isAuthorized = function() {
+
+		adminService.isAuthorized().then(function(response) {
+			$scope.admin = response;	// store admin credentials
+		}, function() {
+			$state.go("admin.default");	// no user detected so redirect to login page
+		});
+
+	};
+	$scope.isAuthorized();				// check for authorized user on load
+
 	// used to reset creation form data after saving
 	$scope.resetFormData = function() {
 
-		// define creation object for create page to use separate ng-models
 		$scope.contentForm = { 
 			type: "text"
 		};
@@ -63,6 +74,7 @@ export function adminController($scope, $state, contentService) {
 		$scope.resetFormData();
 	};
 
+	// delete content based on modal
 	$scope.deleteContent = function(answer) {
 
 		if (answer == "yes") {
@@ -95,6 +107,20 @@ export function adminController($scope, $state, contentService) {
 			section: section
 		};
 
+	};
+
+	// login to admin portal
+	$scope.login = function() {
+		adminService.login($scope.contentForm).then(function() {
+			$scope.isAuthorized();	// check if login was successful and get authorized
+		});
+	};
+
+	// logout of admin portal
+	$scope.logout = function() {
+		adminService.logout().then(function() {
+			$state.reload(); // reload controller to unauthorize admin
+		});
 	};
 
 };

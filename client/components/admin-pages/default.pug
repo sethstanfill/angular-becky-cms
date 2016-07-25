@@ -1,0 +1,11 @@
+span.title(ng-if="!admin") Admin Login
+div.login(ng-if="!admin")
+	form(ng-submit="login()")
+		label email
+			input(type="text" ng-model="contentForm.email" placeholder="Email" required)
+		label password
+			input(type="password" ng-model="contentForm.password" placeholder="Password" required)
+		input(type="submit" value="Login")
+
+span(ng-if="!!admin") Welcome to Becky CMS Admin Portal!
+p(ng-if="!!admin") Use the panel on the left to manage your websites content. If you have problems please contact your developer.
