@@ -2,7 +2,18 @@
   "name": "angular-becky-cms",
   "version": "1.0.0",
   "description": "A simple cms app for angular.",
+  "author": "Seth Stanfill",
+  "license": "MIT",
   "main": "server/server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sethstanfill/angular-becky-cms.git"
+  },
+  "keywords": [
+    "angular",
+    "becky",
+    "cms"
+  ],
   "scripts": {
     "start": "node .",
     "pretest": "eslint .",
@@ -10,21 +21,8 @@
     "build": "rimraf dist && webpack --bail --progress --profile",
     "watch": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
-    "test-watch": "karma start --auto-watch --no-single-run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sethstanfill/angular-becky-cms.git"
-  },
-  "keywords": [
-    "angular",
-    "becky",
-    "cms"
-  ],
-  "author": "Seth Stanfill",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sethstanfill/angular-becky-cms/issues"
+    "test-watch": "karma start --auto-watch --no-single-run",
+    "sdk": "lb-ng server/server.js client/base/lb-services.js"
   },
   "dependencies": {
     "angular": "^1.5.7",
