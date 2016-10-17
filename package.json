@@ -20,6 +20,7 @@
     "posttest": "nsp check",
     "build": "rimraf dist && webpack --bail --progress --profile",
     "watch": "webpack-dev-server --history-api-fallback --inline --progress",
+    "reset": "node server/bin/create-lb-tables.js",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
     "sdk": "lb-ng server/server.js client/base/lb-services.js"

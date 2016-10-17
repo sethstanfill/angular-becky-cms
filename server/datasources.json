@@ -8,7 +8,7 @@
     "port": 3306,
     "url": "",
     "database": "becky_site",
-    "password": "31519XvnQ^Qd",
+    "password": "Password123",
     "name": "beckyapp",
     "user": "root",
     "connector": "mysql"
