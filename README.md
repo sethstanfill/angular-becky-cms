@@ -1,5 +1,8 @@
 # Angular Becky CMS
 
+##Project No Longer Maintained
+This project has been abandoned for a web api with more control. The project has been renamed to BeckyCore and is being buuilt with .net core. You can still use this repo to bootstrap a basic cms with simple text update functionality or expand it for your needs.
+
 ##Version 0.1.6
 The shell is setup and working properly and you can start building apps on your local environment, but this version is not ready for production yet.
 
